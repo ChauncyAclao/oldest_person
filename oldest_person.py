@@ -6,13 +6,22 @@
 
 #input name age
 
-name = input("Name: ")
+#validate name
+while True:
+    try:
+        while True:
+            name = input("Name: ")
+
+            if len(name) >1:
+             break
 
 #validate age
-while True:
-    age = int(input("age "))
+        while True:
+            age = int(input("age "))
 
-    if age > 0 :
-        break
+            if age > 0 :
+                break
+    except:
+        print("try again")
 
 
