@@ -6,13 +6,7 @@
 
 #input name age
 
-#validate name
-while True:
-    name = input("Name: ")
-
-    if int(name):
-        raise
-    break
+name = input("Name: ")
 
 #validate age
 while True:
