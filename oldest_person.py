@@ -4,6 +4,8 @@
 #input another entry?
 #find oldest person
 
+entries = {}
+
 #iput another entry
 while True:
 #input name age
@@ -18,8 +20,13 @@ while True:
     if not age > 0 :
         print("Try again")
         continue
+    entries[name] = {
+        "age" : age
+    }
 
 #for input another entry
     new_entry = input("Give another entry? (yes or no) ")
     if new_entry == "no":
         break
+
+print(entries)
