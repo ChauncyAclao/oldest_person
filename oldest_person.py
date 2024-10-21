@@ -5,5 +5,20 @@
 #find oldest person
 
 #input name age
-name = input("Namw: ")
-age = int(input("age "))
+
+#validate name
+while True:
+    name = input("Name: ")
+
+    if int(name):
+        raise
+    break
+
+#validate age
+while True:
+    age = int(input("age "))
+
+    if age > 0 :
+        break
+
+
