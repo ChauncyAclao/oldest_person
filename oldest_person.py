@@ -6,29 +6,20 @@
 
 #iput another entry
 while True:
-    #input name age
-    #validate name
-    try:
-        while True:
-            name = input("Name: ")
+#input name age
+#validate name 
+    name = input("Name: ")
+    if not len(name) >1:
+        print("Try again")
+        continue
 
-            if len(name) >1:
-                    break
 #validate age
-        while True:
-            age = int(input("age "))
+    age = int(input("age "))
+    if not age > 0 :
+        print("Try again")
+        continue
 
-            if age > 0 :
-                    break
-
-#for another entry
-    except:
-        print("Invalid Retry")
-
+#for input another entry
     new_entry = input("Give another entry? (yes or no) ")
     if new_entry == "no":
-            break
-
-
-        
-        
+        break
