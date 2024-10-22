@@ -20,7 +20,8 @@ while True:
     if not (age.isdigit() and int(age) >= 1):
         print("Try again")
         continue
-    
+
+ #storing info   
     entries.append({
         "name" : name,
         "age" : int(age)
@@ -34,8 +35,10 @@ while True:
 print(entries)
 print()
 
+#finding oldest age
 oldest_age = max(entry["age"] for entry in entries)
 print("oldest age:",oldest_age)
 
+#finding oldest peron
 oldest_name = [entry["name"] for entry in entries if entry["age"] == oldest_age]
 print("oldest people:",oldest_name)
