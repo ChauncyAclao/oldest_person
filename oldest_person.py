@@ -34,8 +34,8 @@ while True:
 print(entries)
 print()
 
-if entries:
-   oldest = max(entry['age'] for entry in entries)
-print(oldest)
+oldest_age = max(entry["age"] for entry in entries)
+print("oldest age:",oldest_age)
 
-
+oldest_name = [entry["name"] for entry in entries if entry["age"] == oldest_age]
+print("oldest people:",oldest_name)
