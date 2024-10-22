@@ -16,10 +16,11 @@ while True:
         continue
 
 #validate age
-    age = int(input("age "))
-    if not age > 0 :
+    age = input("age: ")
+    if not age.isdigit() or int(age) >= 1:
         print("Try again")
         continue
+    
     entries[name] = {
         "age" : age
     }
