@@ -4,7 +4,7 @@
 #input another entry?
 #find oldest person
 
-entries = {}
+entries = []
 
 #iput another entry
 while True:
@@ -21,9 +21,10 @@ while True:
         print("Try again")
         continue
     
-    entries[name] = {
-        "age" : age
-    }
+    entries.append({
+        "name" : name,
+        "age" : int(age)
+    })
 
 #for input another entry
     new_entry = input("Give another entry? (yes or no) ")
@@ -31,3 +32,10 @@ while True:
         break
 
 print(entries)
+print()
+
+if entries:
+   oldest = max(entry['age'] for entry in entries)
+print(oldest)
+
+
