@@ -11,13 +11,13 @@ while True:
 #input name age
 #validate name 
     name = input("Name: ")
-    if not len(name) >1:
+    if not len(name) > 1:
         print("Try again")
         continue
 
 #validate age
     age = input("age: ")
-    if not age.isdigit() or int(age) >= 1:
+    if not (age.isdigit() and int(age) >= 1):
         print("Try again")
         continue
     
